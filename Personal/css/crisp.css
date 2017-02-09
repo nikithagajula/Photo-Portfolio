@@ -1,0 +1,276 @@
+html, main {
+	/* important */
+	height: 100%;
+}
+ 
+.cd-fixed-bg {
+	min-height: 100%;
+	background-size: cover;
+    background-color: #212121;
+	/*background-attachment: fixed;*/
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+ 
+.cd-fixed-bg.cd-bg-1 {
+  background-image: url("../MeBW.jpg");
+}
+.cd-fixed-bg.cd-bg-2 {
+  background-image: url("../17054889196_30f24276c0_o.jpg");
+}
+.cd-fixed-bg.cd-bg-3 {
+  background-image: url("../Sharanya01.jpg");
+}
+.cd-fixed-bg.cd-bg-4 {
+  background-image: url("../16873458327_afb41d12bb_o.jpg");
+}
+
+.cd-fixed-bg.cd-bg-5 {
+  background-image: url("../17080864595_10e54d1ec4_o.jpg");
+}
+.cd-fixed-bg.cd-bg-6 {
+  background-image: url("../16873458877_d30f9395c7_o.jpg");
+}
+.cd-fixed-bg.cd-bg-7 {
+  background-image: url("../17080865175_e92ff3f281_o.jpg");
+}
+
+ 
+.cd-scrolling-bg {
+	min-height: 100%;
+}
+body {
+   font-family: 'perfogramaregular';
+   background-color: #212121;
+ overflow-x: hidden;
+    	height: 100%;
+
+}
+
+p{
+    color:#FAFAFA;
+  font-family: 'perfogramaregular';
+    font-size: 200px;
+}
+
+h1
+{
+    margin-top: 10;
+    font-family: 'perfogramaregular';
+	font-weight: 700; 
+	font-size: 50px;
+	line-height: 1;
+	position: center;
+	margin-bottom: auto; 
+	color: #FAFAFA;
+    text-align: center; 
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+	font-family: 'perfogramaregular';
+	font-weight: 700; 
+	font-size: 100px;
+	line-height: 1;
+	position: center;
+	margin-bottom: auto; 
+	color: #212121;
+    text-align: center; 
+}
+
+@font-face {
+    font-family: 'perfogramaregular';
+    src: url('perfograma-webfont.woff2') format('woff2'),
+         url('perfograma-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+div.mainpageMenuPhoto:hover .t{
+    opacity: 1;
+    color:black;
+    display:block;
+}
+
+div.mainpageMenuPhoto:hover .mainimg{
+    opacity: .1;
+    transition: opacity .7s;
+}
+
+div.t { 
+    color: #FAFAFA;
+    position:absolute;
+    text-align:center;
+    width:100%;
+    height: 100%;
+    vertical-align: middle;
+    line-height: 370px;
+    font-size: 100px;
+    display:none; 
+}
+
+div.t : hover{
+    display:block;
+    color: #FAFAFA;
+
+    opacity: 1;
+}
+
+#mainrow{
+height: 100%;
+width:100%;
+text-align: justify;
+font-size: 0.1px; /* IE 9/10 don't like font-size: 0; */
+min-width: 100%;
+
+}
+
+.container {
+    max-width: 400px; 
+    background-color: #212121;
+    margin: 0 auto;
+    text-align: center; 
+    position: relative;
+}
+
+.container div { 
+    background-color: #FAFAFA; 
+    width: 100%;
+    display: inline-block;
+    display: none;
+}
+
+.container img { 
+    width: 100%;
+    height: auto;
+}
+
+button{
+    position: absolute;
+}
+
+.next { 
+    right: 5px;
+}
+
+.prev {
+    left: 5px;
+}
+
+#mainrow div.mainpageMenuPhoto {
+  width: 100%;
+  height: 100%;
+  display:inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+#mainrow:after  {
+  content:"";
+  width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+  display: inline-block;
+}
+
+.navigation {
+  /* critical sizing and position styles */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  margin-top: 0;
+  margin-bottom: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  /* non-critical appearance styles */
+  list-style: none;
+  background: #212121;
+
+}
+
+/* Navigation Menu - List items */
+.nav-item {
+  /* non-critical appearance styles */
+  width: 280px;
+  border-top: 0px solid #FAFAFA;
+  border-bottom: 1px solid #696969;
+}
+
+.nav-item a {
+  /* non-critical appearance styles */
+  display: block;
+  padding: 1em;
+  /*background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);*/
+  color: dimgrey;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.2s, background 0.5s;
+}
+
+.nav-item a:hover {
+  color: #FAFAFA;
+ /* background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(75,20,20,0.65) 100%);*/
+}
+
+/* Site Wrapper - Everything that isn't navigation */
+.site-wrap {
+  /* Critical position and size styles */
+  min-height: 100%;
+  min-width: 100%;
+  background-color: #212121; /* Needs a background or else the nav will show through */
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
+     overflow-x: hidden;
+
+  
+}
+
+/* Nav Trigger */
+.nav-trigger {
+  /* critical styles - hide the checkbox input */
+  position: fixed;
+  clip: rect(0, 0, 0, 0);
+}
+
+label[for="nav-trigger"] {
+  /* critical positioning styles */
+  position: fixed;
+  left: 15px; top: 15px;
+  z-index: 2;
+  
+  /* non-critical apperance styles */
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+  background-size: contain;
+}
+
+/* Make the Magic Happen */
+.nav-trigger + label, .site-wrap {
+  transition: left 0.2s;
+}
+
+.nav-trigger:checked + label {
+  left: 215px;
+}
+
+.nav-trigger:checked ~ .site-wrap {
+  left: 200px;
+/*  box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);*/
+}
+
+
+
+*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}
+
